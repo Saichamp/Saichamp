@@ -43,7 +43,7 @@ Android, AWS, Git, GitHub
 
 <h3 align="left">Connect with Me</h3>
 <p>
-<a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-<a href="https://instagram.com/yourhandle" target="_blank">Instagram</a> |
-<a href="mailto:your@email.com">Email</a>
+<a href="https://linkedin.com/in/" target="_blank">LinkedIn</a> |
+<a href="https://instagram.com/" target="_blank">Instagram</a> |
+<a href="mailto:">Email</a>
 </p>
