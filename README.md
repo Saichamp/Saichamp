@@ -2,8 +2,8 @@
 <h3 align="center">AI & Full-Stack Engineer | System Builder | Startup Founder</h3>
 
 <p align="center">
-I build intelligent, real-world systems that solve operational, social, and business problems.
-From AI construction monitoring to safety platforms and farmer marketplaces, my work focuses on automation, data, and impact.
+I design and build intelligent, real-world systems that automate processes,
+improve safety, and solve business problems using AI, cloud, and software engineering.
 </p>
 
 <p align="center">
@@ -12,58 +12,38 @@ From AI construction monitoring to safety platforms and farmer marketplaces, my 
 </a>
 </p>
 
----
+<hr/>
 
-<h3 align="left">🌐 Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/yourprofile" target="blank">
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="30" width="40" />
-</a>
-<a href="https://instagram.com/yourhandle" target="blank">
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" height="30" width="40" />
-</a>
-<a href="https://twitter.com/yourhandle" target="blank">
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" height="30" width="40" />
-</a>
+<h3 align="left">About Me</h3>
+<p>
+I am a Computer Science engineer with strong interest in Artificial Intelligence,
+automation, and scalable systems. My projects focus on real-life problems such as
+construction monitoring, tourist safety, disaster management, and farmer marketplaces.
 </p>
 
----
-
-<h3 align="left">🛠 Languages & Tools</h3>
-<p align="left">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/aws/aws-original.svg" width="40"/>
-</p>
-
----
-
-<h3 align="left">📂 My Work Domains</h3>
-
+<h3 align="left">What I Build</h3>
 <ul>
-<li>🤖 AI & Computer Vision – Construction Monitoring, Geo Face Recognition</li>
-<li>🌍 Safety & Smart Systems – Tourist SOS, Disaster Management</li>
-<li>🌱 Social Impact Tech – AgroAccess Farmer Marketplace</li>
-<li>📚 EdTech Platforms – Smart LMS System</li>
-<li>🌐 Startups & Web – Mindrevel</li>
+<li>AI-powered monitoring and analytics systems</li>
+<li>Safety and emergency response platforms</li>
+<li>Social impact and smart city solutions</li>
+<li>Web, mobile, and cloud-based applications</li>
 </ul>
 
----
-
+<h3 align="left">Technology Stack</h3>
 <p>
-<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=Saichamp&show_icons=true&locale=en&layout=compact" />
+Python, Java, C, SQL, Flask, Machine Learning, OpenCV, Firebase,
+Android, AWS, Git, GitHub
 </p>
 
-<p>
-<img align="center" src="https://github-readme-stats.vercel.app/api?username=Saichamp&show_icons=true&locale=en" />
-</p>
+<h3 align="left">Experience Highlights</h3>
+<ul>
 
+<li>Founder – Mindrevel (Tech services startup)</li>
+</ul>
+
+<h3 align="left">Connect with Me</h3>
 <p>
-<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=Saichamp" />
+<a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+<a href="https://instagram.com/yourhandle" target="_blank">Instagram</a> |
+<a href="mailto:your@email.com">Email</a>
 </p>
