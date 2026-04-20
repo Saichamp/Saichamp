@@ -1,104 +1,598 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sai Manikanta — AI & Full-Stack Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1F3C88&height=200&section=header&text=Sai%20Manikanta&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=AI%20%26%20Full-Stack%20Engineer%20%7C%20System%20Builder%20%7C%20Founder&descAlignY=58&descColor=A5B7E6" />
+  :root {
+    --dark-bg:  #0F1F4A;
+    --primary:  #1F3C88;
+    --btn:      #3656A6;
+    --card:     #6B87C9;
+    --light-ui: #A5B7E6;
+    --bg:       #E3E9F9;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg);
+    color: var(--dark-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .pw { max-width: 680px; width: 100%; }
+
+  /* Ticker */
+  .ticker-wrap {
+    overflow: hidden;
+    border-top: 0.5px solid var(--light-ui);
+    border-bottom: 0.5px solid var(--light-ui);
+    margin-bottom: 2.5rem;
+    padding: 10px 0;
+    background: rgba(255,255,255,0.45);
+    border-radius: 6px;
+  }
+  .ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: tick 22s linear infinite;
+  }
+  .ticker span {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--btn);
+    letter-spacing: 0.06em;
+    padding: 0 24px;
+  }
+  .ticker span.dot { color: var(--primary); padding: 0; }
+  @keyframes tick {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 88px;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+
+  .name-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: #ffffff;
+    background: var(--btn);
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin-bottom: 14px;
+  }
+  .name-tag .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--light-ui);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  .name {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--dark-bg);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+  }
+  .name .accent { color: var(--btn); }
+
+  .role {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--card);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .bio {
+    font-size: 15px;
+    color: var(--btn);
+    line-height: 1.75;
+    max-width: 420px;
+  }
+
+  .avatar {
+    width: 88px; height: 88px;
+    border-radius: 16px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    flex-shrink: 0;
+  }
+  .avatar .initials {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .avatar .handle {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--light-ui);
+  }
+
+  /* Stat bar */
+  .stat-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
+    margin-bottom: 2.5rem;
+  }
+  .stat {
+    background: var(--primary);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .stat-val {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-val .unit { color: var(--light-ui); font-size: 16px; }
+  .stat-lbl {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--light-ui);
+  }
+
+  /* Section heading */
+  .section { margin-bottom: 2.5rem; }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .section-num {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--btn);
+    min-width: 24px;
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--btn);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .section-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--light-ui);
+  }
+
+  /* Build grid */
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 10px;
+  }
+  .build-item {
+    border: 0.5px solid var(--light-ui);
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .build-item:hover { border-color: var(--primary); }
+  .build-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .build-item:hover::before { opacity: 1; }
+  .bi-num {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--btn);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .bi-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark-bg);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .bi-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--card);
+  }
+
+  /* Project cards */
+  .project-card {
+    border: 0.5px solid var(--light-ui);
+    border-radius: 10px;
+    padding: 16px 18px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+  }
+  .project-card:hover { border-color: var(--primary); }
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .project-card:hover::before { opacity: 1; }
+  .pc-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .pc-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-bg);
+  }
+  .pc-badge {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--bg);
+    border: 0.5px solid var(--light-ui);
+    color: var(--btn);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .pc-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--card);
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+  .pc-desc {
+    font-size: 13px;
+    color: var(--btn);
+    line-height: 1.6;
+  }
+
+  /* Stack pills */
+  .stack-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .stack-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    padding: 5px 13px;
+    border-radius: 100px;
+    border: 0.5px solid var(--light-ui);
+    background: #ffffff;
+    color: var(--btn);
+    transition: all 0.15s;
+    cursor: default;
+    user-select: none;
+  }
+  .stack-pill:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+  }
+
+  /* Experience */
+  .exp-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 0.5px solid var(--light-ui);
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-index {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--btn);
+    padding-top: 2px;
+    min-width: 32px;
+  }
+  .exp-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 3px;
+  }
+  .exp-desc {
+    font-size: 13px;
+    color: var(--btn);
+    line-height: 1.6;
+  }
+
+  /* Connect */
+  .connect-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .link-btn {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 0.5px solid var(--light-ui);
+    background: #ffffff;
+    color: var(--btn);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.15s;
+  }
+  .link-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+  }
+  .link-btn.hi {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+  }
+  .arr { font-size: 14px; line-height: 1; }
+
+  /* Footer */
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 0.5px solid var(--light-ui);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-left {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--card);
+  }
+  .footer-right {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--card);
+  }
+
+  @media (max-width: 500px) {
+    .name { font-size: 36px; }
+    .hero { grid-template-columns: 1fr; }
+    .avatar { display: none; }
+    .build-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <!-- Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>AI Engineer</span><span class="dot">·</span>
+      <span>Full-Stack Dev</span><span class="dot">·</span>
+      <span>System Builder</span><span class="dot">·</span>
+      <span>Founder @ Mindrevel India</span><span class="dot">·</span>
+      <span>15+ Projects Delivered</span><span class="dot">·</span>
+      <span>Open to Collabs</span><span class="dot">·</span>
+      <span>Python · Flask · ML · AWS · OpenCV</span><span class="dot">·</span>
+      <span>AI Engineer</span><span class="dot">·</span>
+      <span>Full-Stack Dev</span><span class="dot">·</span>
+      <span>System Builder</span><span class="dot">·</span>
+      <span>Founder @ Mindrevel India</span><span class="dot">·</span>
+      <span>15+ Projects Delivered</span><span class="dot">·</span>
+      <span>Open to Collabs</span><span class="dot">·</span>
+      <span>Python · Flask · ML · AWS · OpenCV</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <div class="name-tag">
+        <span class="dot"></span>
+        open to work &amp; collaborations
+      </div>
+      <div class="name">Sai<br>Mani<span class="accent">kanta</span></div>
+      <div class="role">// AI &amp; Full-Stack Engineer · Founder @ Mindrevel India</div>
+      <p class="bio">I design and build intelligent, real-world systems that automate processes, improve safety, and solve business problems using AI, cloud, and software engineering. Based in India 🇮🇳</p>
+    </div>
+    <div class="avatar">
+      <div class="initials">SM</div>
+      <span class="handle">@Saichamp</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stat-bar">
+    <div class="stat">
+      <div class="stat-val">15<span class="unit">+</span></div>
+      <div class="stat-lbl">projects built</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">1<span class="unit">x</span></div>
+      <div class="stat-lbl">startup founded</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">4<span class="unit">+</span></div>
+      <div class="stat-lbl">domains mastered</div>
+    </div>
+  </div>
+
+  <!-- What I Build -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">What I build</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="build-grid">
+      <div class="build-item">
+        <span class="bi-num">→ 01</span>
+        <div class="bi-text">AI-powered monitoring &amp; analytics</div>
+        <div class="bi-tag">CV · real-time detection</div>
+      </div>
+      <div class="build-item">
+        <span class="bi-num">→ 02</span>
+        <div class="bi-text">Safety &amp; emergency response platforms</div>
+        <div class="bi-tag">disaster mgmt · alert systems</div>
+      </div>
+      <div class="build-item">
+        <span class="bi-num">→ 03</span>
+        <div class="bi-text">Scalable web &amp; mobile applications</div>
+        <div class="bi-tag">full-stack · Android · cloud</div>
+      </div>
+      <div class="build-item">
+        <span class="bi-num">→ 04</span>
+        <div class="bi-text">Social impact &amp; smart city solutions</div>
+        <div class="bi-tag">farmer marketplaces · civic tech</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Project -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">Featured project</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="project-card">
+      <div class="pc-head">
+        <div class="pc-name">PhotoManEa</div>
+        <span class="pc-badge">AI · Photo Platform</span>
+      </div>
+      <div class="pc-tag">"Share moments. Let AI find the ones that matter."</div>
+      <div class="pc-desc">A smart photo sharing platform that uses AI to automatically recognize and find people across shared photos — no manual tagging needed. Built for groups, events, and communities who want effortless photo discovery.</div>
+    </div>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">Tech stack</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="stack-row">
+      <span class="stack-pill">Python</span>
+      <span class="stack-pill">Java</span>
+      <span class="stack-pill">C</span>
+      <span class="stack-pill">SQL</span>
+      <span class="stack-pill">Flask</span>
+      <span class="stack-pill">Machine Learning</span>
+      <span class="stack-pill">OpenCV</span>
+      <span class="stack-pill">Firebase</span>
+      <span class="stack-pill">Android</span>
+      <span class="stack-pill">AWS</span>
+      <span class="stack-pill">Git</span>
+      <span class="stack-pill">GitHub</span>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-title">Experience</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="exp-item">
+      <span class="exp-index">[01]</span>
+      <div>
+        <div class="exp-name">Founder — Mindrevel India</div>
+        <div class="exp-desc">Founded and runs a tech services startup focused on building intelligent, real-world systems. Leading product development, client delivery, and team operations across AI, web, and mobile domains.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <span class="exp-index">[02]</span>
+      <div>
+        <div class="exp-name">Teaching &amp; Mentoring</div>
+        <div class="exp-desc">Experienced in teaching programming, AI concepts, and software engineering fundamentals. Helping students and early-career developers build practical skills through hands-on projects.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <span class="exp-index">[03]</span>
+      <div>
+        <div class="exp-name">Scalable App &amp; Website Development</div>
+        <div class="exp-desc">15+ projects delivered across full-stack web, mobile (Android), and cloud-hosted applications. Specialising in clean architecture, performance, and real-world deployment.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connect -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">Connect</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="connect-row">
+      <a class="link-btn hi" href="https://www.linkedin.com/in/sai-manikanta-komatigunta-6891aa313" target="_blank">
+        <span class="arr">↗</span> LinkedIn
+      </a>
+      <a class="link-btn" href="https://instagram.com/whoami3666" target="_blank">
+        <span class="arr">↗</span> Instagram
+      </a>
+      <a class="link-btn" href="https://t.me/whoami3666" target="_blank">
+        <span class="arr">↗</span> Telegram
+      </a>
+      <a class="link-btn" href="mailto:sai@mindrevel.in" target="_blank">
+        <span class="arr">↗</span> sai@mindrevel.in
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span class="footer-left">// sai manikanta · mindrevel india</span>
+    <span class="footer-right">github.com/Saichamp</span>
+  </div>
 
 </div>
-
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=3656A6&center=true&vCenter=true&width=600&lines=Building+AI-powered+real-world+systems;Full-Stack+Engineer+%7C+Startup+Founder;Python+%7C+ML+%7C+Flask+%7C+AWS+%7C+OpenCV;Open+to+collaborations+%F0%9F%9A%80)](https://git.io/typing-svg)
-
-</div>
-
----
-
-## 👋 About Me
-
-I'm a Computer Science engineer passionate about **Artificial Intelligence**, automation, and scalable systems. I design and build intelligent, real-world systems that automate processes, improve safety, and solve business problems using AI, cloud, and software engineering.
-
-My projects focus on real-life problems — construction monitoring, tourist safety, disaster management, and farmer marketplaces.
-
----
-
-## 🔨 What I Build
-
-| | Domain | Focus |
-|---|---|---|
-| `→ 01` | **AI Monitoring & Analytics** | CV-based detection, real-time analytics |
-| `→ 02` | **Safety & Emergency Platforms** | Disaster response, alert systems |
-| `→ 03` | **Social Impact & Smart City** | Farmer marketplaces, civic tools |
-| `→ 04` | **Web, Mobile & Cloud Apps** | Full-stack, Android, AWS-hosted |
-
----
-
-## 🧰 Tech Stack
-
-**Languages**
-
-![Python](https://img.shields.io/badge/Python-1F3C88?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-3656A6?style=for-the-badge&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-0F1F4A?style=for-the-badge&logo=c&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-6B87C9?style=for-the-badge&logo=mysql&logoColor=white)
-
-**Frameworks & Libraries**
-
-![Flask](https://img.shields.io/badge/Flask-1F3C88?style=for-the-badge&logo=flask&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-3656A6?style=for-the-badge&logo=opencv&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-0F1F4A?style=for-the-badge&logo=scikitlearn&logoColor=white)
-
-**Cloud & Tools**
-
-![AWS](https://img.shields.io/badge/AWS-1F3C88?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-3656A6?style=for-the-badge&logo=firebase&logoColor=white)
-![Android](https://img.shields.io/badge/Android-0F1F4A?style=for-the-badge&logo=android&logoColor=white)
-![Git](https://img.shields.io/badge/Git-6B87C9?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-1F3C88?style=for-the-badge&logo=github&logoColor=white)
-
----
-
-## 💼 Experience
-
-**`[01]`** &nbsp; **Founder — Mindrevel**
-> Tech services startup · Building intelligent, real-world systems that solve business problems
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Saichamp&show_icons=true&theme=react&bg_color=0F1F4A&title_color=A5B7E6&icon_color=6B87C9&text_color=ffffff&border_color=3656A6&hide_border=false)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Saichamp&layout=compact&theme=react&bg_color=0F1F4A&title_color=A5B7E6&text_color=ffffff&border_color=3656A6)
-
-![GitHub Streak](https://streak-stats.demolab.com?user=Saichamp&theme=dark&background=0F1F4A&ring=3656A6&fire=6B87C9&currStreakLabel=A5B7E6&border=3656A6)
-
-</div>
-
----
-
-## 🏆 Trophies
-
-<div align="center">
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=Saichamp&theme=nord&no-frame=true&row=1&column=6)
-
-</div>
-
----
-
-## 🤝 Connect
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-1F3C88?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/)
-[![Instagram](https://img.shields.io/badge/Instagram-3656A6?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/)
-[![Email](https://img.shields.io/badge/Email-0F1F4A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:)
-
-</div>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1F3C88&height=100&section=footer" />
-
-</div>
+</body>
+</html>
